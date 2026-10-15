@@ -12,6 +12,11 @@ class Toki < Formula
   sha256 "b61f0e54e94f1e80530e8d84b43ad01494db057cbf0c7bff8dabda2e49702088"
   license "MIT" # the code; the art is all rights reserved (art/LICENSE)
 
+  bottle do
+    root_url "https://github.com/g1d30nB/homebrew-toki/releases/download/toki-0.1.4"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "ec2f76f5e20b9ff5cfbc2799f8bb901dc0313b14a615126239e654d0e6924d11"
+  end
+
   depends_on "esptool" # talks to the robot's chip: backup, flash, restore
   depends_on :macos
   # Runs the bridge and the toki command (TypeScript, no build step). A versioned,
