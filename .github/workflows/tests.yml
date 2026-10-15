@@ -17,9 +17,9 @@ jobs:
   test-bot:
     strategy:
       matrix:
-        # Toki is macOS only. Bottles pour on the macOS they're built on and newer,
-        # so build on the oldest still offered: a stranger's Mac then needs no Xcode.
-        os: [ macos-14, macos-15 ]
+        # Toki is macOS only. Bottles pour on the macOS they're built on and newer, so
+        # build on the oldest that works: macOS 14 can't (esptool has no bottle there).
+        os: [ macos-15 ]
     runs-on: ${{ matrix.os }}
     permissions:
       actions: read

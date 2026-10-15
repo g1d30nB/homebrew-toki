@@ -9,4 +9,4 @@ toki setup
 
 `toki setup` walks you through everything, one step at a time. See [Toki's README](https://github.com/g1d30nB/toki#readme) for what you need.
 
-Bottles are built here by GitHub Actions (`brew test-bot`), so installing doesn't need Xcode.
+Bottles are built here by GitHub Actions (`brew test-bot`) for Apple Silicon Macs on macOS 15 or later, so installing there doesn't need Xcode. On macOS 14 or an Intel Mac, Homebrew builds Toki from source and asks for Apple's Command Line Tools first (`xcode-select --install`).
